@@ -22,8 +22,8 @@ export default function RootLayout({
 					name="description"
 					content="Broker Compare • Trader & Investments"
 				/>
-				<link rel="icon" href="/images/favicon.ico" />
-				<meta property="og:image" content="/images/favicon.ico" />
+				<link rel="icon" href="./images/favicon.ico" />
+				<meta property="og:image" content="./images/favicon.ico" />
 			</head>
 			<body className="dark:bg-black">
 				<Providers>
