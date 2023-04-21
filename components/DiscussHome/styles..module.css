@@ -1,0 +1,16 @@
+.card_hide {
+	display: none;
+	animation: fadeIn 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.card_owner_hover:hover .card_hide {
+	display: flex !important;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

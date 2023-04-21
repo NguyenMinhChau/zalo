@@ -6,8 +6,7 @@ import ThemeToggler from './ThemeToggler';
 import menuData from './menuData';
 import { usePathname } from 'next/navigation';
 import styles from './Header.module.css';
-import LogoLight from '../../public/images/logo/logo_light.svg';
-import LogoDark from '../../public/images/logo/logo_dark.svg';
+import LogoDark from '../../public/images/logo/logo_dark.png';
 
 const Header = () => {
 	// Navbar toggle
@@ -45,7 +44,7 @@ const Header = () => {
 			<header
 				className={`header top-0 left-0 z-40 flex w-full items-center bg-transparent ${
 					sticky
-						? '!fixed !z-[9999] !bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm !transition dark:!bg-primary dark:!bg-opacity-20'
+						? '!fixed !z-[9999] !bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm !transition dark:!bg-primary dark:!bg-opacity-50'
 						: 'absolute'
 				}`}
 			>
@@ -58,13 +57,13 @@ const Header = () => {
 									sticky ? 'py-5 lg:py-2' : 'py-8'
 								} `}
 							>
-								<Image
+								{/* <Image
 									src={LogoLight}
 									alt="logo"
 									width={140}
 									height={30}
 									className="w-full dark:hidden"
-								/>
+								/> */}
 								<Image
 									src={LogoDark}
 									alt="logo"
@@ -169,6 +168,14 @@ const Header = () => {
 																			href={
 																				submenuItem.path!
 																			}
+																			onClick={() => {
+																				setOpenIndex(
+																					-1,
+																				);
+																				setNavbarOpen(
+																					false,
+																				);
+																			}}
 																			key={
 																				submenuItem.id
 																			}
@@ -202,9 +209,9 @@ const Header = () => {
 								>
 									Sign Up
 								</Link>
-								<div>
+								{/* <div>
 									<ThemeToggler />
-								</div>
+								</div> */}
 							</div>
 						</div>
 					</div>

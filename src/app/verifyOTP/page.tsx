@@ -40,7 +40,7 @@ const ForgotPasswordPage = () => {
 									Don’t you have an account?{' '}
 									<Link
 										href="/signup"
-										className="text-primary hover:underline"
+										className="text-primarytext hover:underline"
 									>
 										Sign up
 									</Link>
@@ -49,7 +49,7 @@ const ForgotPasswordPage = () => {
 									Already using Startup?{' '}
 									<Link
 										href="/signin"
-										className="text-primary hover:underline"
+										className="text-primarytext hover:underline"
 									>
 										Sign in
 									</Link>
@@ -98,10 +98,10 @@ const ForgotPasswordPage = () => {
 								y2="453.581"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stopColor="#4A6CF7" />
+								<stop stopColor="#4b7bec" />
 								<stop
 									offset="1"
-									stopColor="#4A6CF7"
+									stopColor="#4b7bec"
 									stopOpacity="0"
 								/>
 							</linearGradient>
@@ -113,10 +113,10 @@ const ForgotPasswordPage = () => {
 								y2="1192.04"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stopColor="#4A6CF7" />
+								<stop stopColor="#4b7bec" />
 								<stop
 									offset="1"
-									stopColor="#4A6CF7"
+									stopColor="#4b7bec"
 									stopOpacity="0"
 								/>
 							</linearGradient>

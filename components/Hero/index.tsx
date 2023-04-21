@@ -14,23 +14,45 @@ const Hero = () => {
 								className="wow fadeInUp mx-auto max-w-[800px] text-center"
 								data-wow-delay=".2s"
 							>
-								<h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-									Broker Compare
+								<h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight lg:text-4xl animate__animated animate__fadeInDown">
+									DISCOVER | MEET | DISCUSS | ENGAGE
 								</h1>
-								<p className="mb-12 text-base font-medium !leading-relaxed text-body-color dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
-									Lorem ipsum, dolor sit amet consectetur
-									adipisicing elit. Ullam excepturi quas
-									repellat, incidunt quia, natus neque culpa,
-									cumque sit qui dicta alias. Quidem at
-									ratione commodi debitis maxime facilis
-									eveniet • Broker Compare!
+								<p
+									className="mb-12 text-base font-medium !leading-relaxed text-body-color dark:text-white dark:opacity-90 sm:text-lg md:text-xl animate__animated animate__fadeInDown"
+									style={{
+										letterSpacing: '6px',
+									}}
+								>
+									THE LARGEST FINANCIAL B2B EXPO
 								</p>
-								<div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+								<div className="w-full flex justify-between mb-10 animate__animated animate__fadeInDown">
+									<div className="flex flex-col w-1/4">
+										<p className="fwb text-5xl">00</p>
+										<p className="fwb text-sm">DAYS</p>
+									</div>
+									<div className="flex flex-col w-1/4">
+										<p className="fwb text-5xl">00</p>
+										<p className="fwb text-sm">HOURS</p>
+									</div>
+									<div className="flex flex-col w-1/4">
+										<p className="fwb text-5xl">00</p>
+										<p className="fwb text-sm">MINUTES</p>
+									</div>
+									<div className="flex flex-col w-1/4">
+										<p className="fwb text-5xl">00</p>
+										<p className="fwb text-sm">SECONDS</p>
+									</div>
+								</div>
+								<p className="mb-10 text-xl animate__animated animate__fadeInDown">
+									7-9 June 2022 @ Palais des Sports - Spyros
+									Kyprianou, Limassol, Cyprus
+								</p>
+								<div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 animate__animated animate__fadeInDown">
 									<Link
 										href="/"
 										className="rounded-md bg-primary py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
 									>
-										About us
+										Sponser / Exhibit
 									</Link>
 									{/* <Link
 										href="https://github.com/NextJSTemplates/startup-nextjs"
@@ -109,10 +131,10 @@ const Hero = () => {
 								y2="288"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stopColor="#4A6CF7" />
+								<stop stopColor="#4b7bec" />
 								<stop
 									offset="1"
-									stopColor="#4A6CF7"
+									stopColor="#4b7bec"
 									stopOpacity="0"
 								/>
 							</linearGradient>
@@ -126,12 +148,12 @@ const Hero = () => {
 							>
 								<stop
 									offset="0.145833"
-									stopColor="#4A6CF7"
+									stopColor="#4b7bec"
 									stopOpacity="0"
 								/>
 								<stop
 									offset="1"
-									stopColor="#4A6CF7"
+									stopColor="#4b7bec"
 									stopOpacity="0.08"
 								/>
 							</radialGradient>
@@ -145,12 +167,12 @@ const Hero = () => {
 							>
 								<stop
 									offset="0.145833"
-									stopColor="#4A6CF7"
+									stopColor="#4b7bec"
 									stopOpacity="0"
 								/>
 								<stop
 									offset="1"
-									stopColor="#4A6CF7"
+									stopColor="#4b7bec"
 									stopOpacity="0.08"
 								/>
 							</radialGradient>
@@ -162,10 +184,10 @@ const Hero = () => {
 								y2="351.421"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stopColor="#4A6CF7" />
+								<stop stopColor="#4b7bec" />
 								<stop
 									offset="1"
-									stopColor="#4A6CF7"
+									stopColor="#4b7bec"
 									stopOpacity="0"
 								/>
 							</linearGradient>
@@ -177,7 +199,7 @@ const Hero = () => {
 								y2="448.882"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stopColor="#4A6CF7" />
+								<stop stopColor="#4b7bec" />
 								<stop
 									offset="1"
 									stopColor="white"
@@ -192,7 +214,7 @@ const Hero = () => {
 								y2="470"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stopColor="#4A6CF7" />
+								<stop stopColor="#4b7bec" />
 								<stop
 									offset="1"
 									stopColor="white"
@@ -207,10 +229,10 @@ const Hero = () => {
 								y2="338.63"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stopColor="#4A6CF7" />
+								<stop stopColor="#4b7bec" />
 								<stop
 									offset="1"
-									stopColor="#4A6CF7"
+									stopColor="#4b7bec"
 									stopOpacity="0"
 								/>
 							</linearGradient>
@@ -264,8 +286,8 @@ const Hero = () => {
 								y2="212.24"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stopColor="#4A6CF7" stopOpacity="0" />
-								<stop offset="1" stopColor="#4A6CF7" />
+								<stop stopColor="#4b7bec" stopOpacity="0" />
+								<stop offset="1" stopColor="#4b7bec" />
 							</linearGradient>
 							<linearGradient
 								id="paint1_linear_25:218"
@@ -275,8 +297,8 @@ const Hero = () => {
 								y2="212.24"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stopColor="#4A6CF7" stopOpacity="0" />
-								<stop offset="1" stopColor="#4A6CF7" />
+								<stop stopColor="#4b7bec" stopOpacity="0" />
+								<stop offset="1" stopColor="#4b7bec" />
 							</linearGradient>
 							<linearGradient
 								id="paint2_linear_25:218"
@@ -286,8 +308,8 @@ const Hero = () => {
 								y2="212.24"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stopColor="#4A6CF7" stopOpacity="0" />
-								<stop offset="1" stopColor="#4A6CF7" />
+								<stop stopColor="#4b7bec" stopOpacity="0" />
+								<stop offset="1" stopColor="#4b7bec" />
 							</linearGradient>
 							<linearGradient
 								id="paint3_linear_25:218"
@@ -297,8 +319,8 @@ const Hero = () => {
 								y2="210.214"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stopColor="#4A6CF7" stopOpacity="0" />
-								<stop offset="1" stopColor="#4A6CF7" />
+								<stop stopColor="#4b7bec" stopOpacity="0" />
+								<stop offset="1" stopColor="#4b7bec" />
 							</linearGradient>
 							<linearGradient
 								id="paint4_linear_25:218"
@@ -308,10 +330,10 @@ const Hero = () => {
 								y2="99.5816"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stopColor="#4A6CF7" />
+								<stop stopColor="#4b7bec" />
 								<stop
 									offset="1"
-									stopColor="#4A6CF7"
+									stopColor="#4b7bec"
 									stopOpacity="0"
 								/>
 							</linearGradient>

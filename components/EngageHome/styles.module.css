@@ -1,0 +1,32 @@
+.circle_map {
+	top: -50px;
+	right: 10px;
+	width: 350px;
+	height: 350px;
+	border-radius: 50%;
+	border: 2px solid #ffa500;
+	overflow: hidden;
+}
+.map_container {
+	background-color: transparent;
+	border-radius: 50%;
+	border: 5px solid transparent;
+}
+
+/* TABLET */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+	.circle_map {
+		top: -30px;
+		width: 200px;
+		height: 200px;
+	}
+}
+
+/* MOBILE */
+@media (max-width: 46.25em) {
+	.circle_map {
+		top: -20px;
+		width: 100px;
+		height: 100px;
+	}
+}
