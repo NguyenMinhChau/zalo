@@ -10,4 +10,5 @@ export { default as BookYourSpot } from './BookYourSpot/';
 export { default as EngageHome } from './EngageHome/';
 export { default as SliderImage } from './SliderImage/';
 export { default as ScrollToTop } from './ScrollToTop/';
+export { default as SkeletonCP } from './SkeletonCP/';
 export { default as Breadcrumb } from './Common/Breadcrumb';

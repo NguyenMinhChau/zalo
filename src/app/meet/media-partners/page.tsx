@@ -1,4 +1,4 @@
-import { Breadcrumb } from '../../../../components';
+import { Breadcrumb, SkeletonCP } from '../../../../components';
 
 const MediaPartnersPage = () => {
 	return (
@@ -8,9 +8,7 @@ const MediaPartnersPage = () => {
 				description="Media Partners"
 			/>
 			<div className="container mb-5">
-				<p className="text-center text-lg font-bold">
-					This is meet/media partners page
-				</p>
+				<SkeletonCP />
 			</div>
 		</>
 	);

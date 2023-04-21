@@ -1,10 +1,12 @@
+'use client';
 import Image from 'next/image';
-import React from 'react';
+import React, { useMemo } from 'react';
 import ImageGroup from '../../public/images/engage/Group.png';
 import BgMap from '../../public/images/engage/bg-map.png';
 import MapSVG from '../../public/images/engage/image_map.svg';
 import Link from 'next/link';
 import styles from './styles.module.css';
+import GoogleMapCP from '../GoogleMap';
 
 function EngageHome() {
 	return (
@@ -92,7 +94,8 @@ function EngageHome() {
 				<Image src={MapSVG} alt="map_svg" width={30} height={30} />
 				<Link
 					className="underline dark:text-black font-bold ml-3"
-					href="/"
+					href="https://goo.gl/maps/TV2evBP85vuTXD6VA"
+					target="_blank"
 				>
 					Google Map Link
 				</Link>
@@ -107,9 +110,19 @@ function EngageHome() {
 					className={`absolute bg-white ${styles.circle_map}`}
 					data-aos="flip-down"
 				>
-					<div
-						className={`w-full h-full${styles.map_container}`}
-					></div>
+					<div className={`w-full h-full ${styles.map_container}`}>
+						{/* <GoogleMapCP borderRadius="50%" /> */}
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m17!1m8!1m3!1d419791.99864244746!2d32.9985781!3d34.7146375!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d34.714637499999995!2d32.998578099999996!5e0!3m2!1sen!2s!4v1682072433986!5m2!1sen!2s"
+							width="100%"
+							height="100%"
+							allowFullScreen
+							loading="lazy"
+							referrerPolicy="no-referrer-when-downgrade"
+							title="map"
+							style={{ borderRadius: '50%' }}
+						></iframe>
+					</div>
 				</div>
 			</div>
 		</div>
