@@ -1,3 +1,8 @@
+.image_slider {
+	width: 70%;
+	aspect-ratio: 3/2;
+}
+
 .dots {
 	display: flex;
 	justify-content: center;
@@ -6,8 +11,8 @@
 }
 .dot {
 	display: inline-block;
-	width: 6px;
-	height: 6px;
+	width: 7px;
+	height: 7px;
 	border-radius: 50%;
 	background-color: #fff;
 	margin-right: 10px;
@@ -16,4 +21,10 @@
 }
 .dot.active {
 	background-color: #2f3dff;
+}
+/* MOBILE */
+@media (max-width: 46.25em) {
+	.image_slider {
+		width: 100%;
+	}
 }

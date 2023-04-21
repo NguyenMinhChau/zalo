@@ -21,8 +21,17 @@ function SliderImage({ URL_IMAGES }: SliderImageType) {
 			},
 			slides: {
 				perView: 5,
+				spacing: 15,
 			},
 			loop: true,
+			breakpoints: {
+				'(max-width: 46.25rem)': {
+					slides: {
+						perView: 3,
+						spacing: 20,
+					},
+				},
+			},
 		},
 		[
 			(slider) => {
@@ -67,7 +76,7 @@ function SliderImage({ URL_IMAGES }: SliderImageType) {
 							<Image
 								src={item}
 								alt="image"
-								style={{ aspectRatio: '3/2', width: '55%' }}
+								className={`${styles.image_slider}`}
 							/>
 						</div>
 					);
