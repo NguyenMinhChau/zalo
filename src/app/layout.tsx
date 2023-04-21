@@ -23,7 +23,7 @@ export default function RootLayout({
 				/>
 				<meta
 					name="description"
-					content="Broker Compare • Trader & Investments"
+					content="We pride ourselves in delivering the highest quality expo within our industry that our attendees, exhibitors and sponsors have come to expect."
 				/>
 				<link rel="icon" href="./images/favicon.ico" />
 				<link
@@ -34,7 +34,10 @@ export default function RootLayout({
 					href="https://unpkg.com/aos@2.3.1/dist/aos.css"
 					rel="stylesheet"
 				/>
-				<meta property="og:image" content="./images/favicon.ico" />
+				<meta
+					property="og:image"
+					content="./images/logo/meta_org_image.png"
+				/>
 				<script
 					defer
 					src="https://kit.fontawesome.com/cc3041f69f.js"
