@@ -5,10 +5,6 @@ const AOS = require('aos');
 import './globals.css';
 import { useEffect } from 'react';
 
-export const metadata = {
-	title: `IFX EXPO - ${process.env.NEXT_PUBLIC_TITLE_APP}`,
-};
-
 export default function RootLayout({
 	children,
 }: {
