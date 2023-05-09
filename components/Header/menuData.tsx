@@ -1,3 +1,4 @@
+import routers from '../../routers/routers';
 import { Menu } from '../../types/menu';
 
 const menuData: Menu[] = [
@@ -9,25 +10,25 @@ const menuData: Menu[] = [
 			{
 				id: 11,
 				title: 'About',
-				path: '/discover/about',
+				path: routers.about,
 				newTab: false,
 			},
 			{
 				id: 12,
 				title: 'Parties',
-				path: '/discover/parties',
+				path: routers.parties,
 				newTab: false,
 			},
 			{
 				id: 13,
 				title: 'Gallery',
-				path: '/discover/gallery',
+				path: routers.gallery,
 				newTab: false,
 			},
 			{
 				id: 14,
 				title: 'Video',
-				path: '/discover/video',
+				path: routers.video,
 				newTab: false,
 			},
 		],
@@ -40,25 +41,25 @@ const menuData: Menu[] = [
 			{
 				id: 21,
 				title: 'Sponsers',
-				path: '/meet/sponsers',
+				path: routers.sponsers,
 				newTab: false,
 			},
 			{
 				id: 22,
 				title: 'Exhibitor',
-				path: '/meet/exhibitor',
+				path: routers.exhibitor,
 				newTab: false,
 			},
 			{
 				id: 23,
 				title: 'Media Partners',
-				path: '/meet/media-partners',
+				path: routers.mediaPartners,
 				newTab: false,
 			},
 			{
 				id: 24,
 				title: 'Attendees',
-				path: '/meet/attendees',
+				path: routers.attendess,
 				newTab: false,
 			},
 		],
@@ -71,13 +72,13 @@ const menuData: Menu[] = [
 			{
 				id: 31,
 				title: 'Agenda',
-				path: '/discuss/agenda',
+				path: routers.agenda,
 				newTab: false,
 			},
 			{
 				id: 32,
 				title: 'Speakers',
-				path: '/discuss/speakers',
+				path: routers.speakers,
 				newTab: false,
 			},
 		],
@@ -90,37 +91,37 @@ const menuData: Menu[] = [
 			{
 				id: 41,
 				title: 'Floorplan',
-				path: '/engage/floorplan',
+				path: routers.floorplan,
 				newTab: false,
 			},
 			{
 				id: 42,
 				title: 'FAQ',
-				path: '/engage/faq',
+				path: routers.faq,
 				newTab: false,
 			},
 			{
 				id: 43,
 				title: 'Venue',
-				path: '/engage/venue',
+				path: routers.venue,
 				newTab: false,
 			},
 			{
 				id: 44,
 				title: 'Transportation',
-				path: '/engage/transportation',
+				path: routers.transportation,
 				newTab: false,
 			},
 			{
 				id: 45,
 				title: 'Accommodation',
-				path: '/engage/accommodation',
+				path: routers.accommodation,
 				newTab: false,
 			},
 			{
 				id: 46,
 				title: 'Contact us',
-				path: '/engage/contact-us',
+				path: routers.contact,
 				newTab: false,
 			},
 		],

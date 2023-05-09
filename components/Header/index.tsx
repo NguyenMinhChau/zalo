@@ -2,13 +2,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import ThemeToggler from './ThemeToggler';
+// import ThemeToggler from './ThemeToggler';
 import menuData from './menuData';
 import { usePathname } from 'next/navigation';
 import styles from './Header.module.css';
 import LogoDark from '../../public/images/logo/logo_dark.png';
+import ButtonAuthenMobile from './buttonAuthenMobile';
+import routers from '../../routers/routers';
+import { useAppContext } from '../../helpers';
 
 const Header = () => {
+	const { state } = useAppContext();
+	const { currentUser } = state.set;
 	// Navbar toggle
 	const [navbarOpen, setNavbarOpen] = useState(false);
 	const navbarToggleHandler = () => {
@@ -38,7 +43,7 @@ const Header = () => {
 		}
 	};
 	const pathname = usePathname();
-
+	const handleLogout = () => {};
 	return (
 		<>
 			<header
@@ -197,18 +202,32 @@ const Header = () => {
 								</nav>
 							</div>
 							<div className="flex items-center justify-end pr-16 lg:pr-0">
-								<Link
-									href="/signin"
-									className="hidden py-3 px-7 text-base font-bold text-dark hover:opacity-70 dark:text-white md:block"
-								>
-									Sign In
-								</Link>
-								<Link
-									href="/signup"
-									className="ease-in-up hidden rounded-md bg-primary py-3 px-8 text-base font-bold text-white transition duration-300 hover:bg-opacity-90 hover:shadow-signUp md:block md:px-9 lg:px-6 xl:px-9"
-								>
-									Sign Up
-								</Link>
+								{!currentUser ? (
+									<>
+										<Link
+											href={routers.signin}
+											className="hidden py-3 px-7 text-base font-bold text-dark hover:opacity-70 dark:text-white md:block"
+										>
+											Sign In
+										</Link>
+										<Link
+											href={routers.singup}
+											className="ease-in-up hidden rounded-md bg-primary py-3 px-8 text-base font-bold text-white transition duration-300 hover:bg-opacity-90 hover:shadow-signUp md:block md:px-9 lg:px-6 xl:px-9"
+										>
+											Sign Up
+										</Link>
+									</>
+								) : (
+									<div
+										onClick={handleLogout}
+										className="ease-in-up hidden rounded-md bg-primary py-3 px-8 text-base font-bold text-white transition duration-300 hover:bg-opacity-90 hover:shadow-signUp md:block md:px-9 lg:px-6 xl:px-9 cursor-pointer"
+									>
+										Sign Out
+									</div>
+								)}
+								<div>
+									<ButtonAuthenMobile />
+								</div>
 								{/* <div>
 									<ThemeToggler />
 								</div> */}

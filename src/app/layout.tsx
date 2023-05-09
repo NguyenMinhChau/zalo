@@ -4,6 +4,7 @@ import { Providers } from './providers';
 const AOS = require('aos');
 import './globals.css';
 import { useEffect } from 'react';
+import { UseProvider } from '../../appState/';
 
 export default function RootLayout({
 	children,
@@ -50,12 +51,14 @@ export default function RootLayout({
 				<title>{`IFX EXPO - ${process.env.NEXT_PUBLIC_TITLE_APP}`}</title>
 			</head>
 			<body className="dark:bg-black">
-				<Providers>
-					<Header />
-					{children}
-					<Footer />
-					<ScrollToTop />
-				</Providers>
+				<UseProvider>
+					<Providers>
+						<Header />
+						{children}
+						<Footer />
+						<ScrollToTop />
+					</Providers>
+				</UseProvider>
 			</body>
 		</html>
 	);
