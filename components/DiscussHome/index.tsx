@@ -10,15 +10,15 @@ function DiscussHome() {
 		<div className="my-5 container">
 			<div
 				data-aos="fade-right"
-				className="font-bold text-2xl lg:text-4xl dark:text-white mb-3"
+				className="font-bold text-2xl lg:text-4xl text-[#000] mb-3"
 			>
 				DISCUSS
 			</div>
-			<h1 className="text-xl" data-aos="fade-right">
+			<h1 className="text-xl text-[#000]" data-aos="fade-right">
 				Knowledge is power.
 			</h1>
 			<p
-				className="mt-3 mb-5 text-justify leading-7"
+				className="mt-3 mb-5 text-justify text-[#000] leading-7"
 				data-aos="fade-right"
 			>
 				Listen to engaging content from inspiring industry experts.

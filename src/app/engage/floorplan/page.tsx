@@ -1,10 +1,11 @@
-import { Breadcrumb, SkeletonCP } from '../../../../components';
+import { Hero, SkeletonCP } from '../../../../components';
 
 const FloorPlanPage = () => {
 	return (
 		<>
-			<Breadcrumb pageName="Engage → Floorplan" description="Floorplan" />
-			<div className="container mb-5">
+			{/* <Breadcrumb pageName="Engage → Floorplan" description="Floorplan" /> */}
+			<Hero />
+			<div className="container my-5">
 				<SkeletonCP />
 			</div>
 		</>

@@ -1,10 +1,11 @@
-import { Breadcrumb, SkeletonCP } from '../../../../components';
+import { Hero, SkeletonCP } from '../../../../components';
 
 const SpeakersPage = () => {
 	return (
 		<>
-			<Breadcrumb pageName="Discuss → Speakers" description="Speakers" />
-			<div className="container mb-5">
+			{/* <Breadcrumb pageName="Discuss → Speakers" description="Speakers" /> */}
+			<Hero />
+			<div className="container my-5">
 				<SkeletonCP />
 			</div>
 		</>

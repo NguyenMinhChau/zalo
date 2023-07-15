@@ -49,8 +49,8 @@ const Header = () => {
 			<header
 				className={`header top-0 left-0 z-40 flex w-full items-center bg-transparent ${
 					sticky
-						? '!fixed !z-[9999] !bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm !transition dark:!bg-primary dark:!bg-opacity-50'
-						: 'absolute'
+						? '!fixed !z-[9999] !bg-white shadow-sticky !transition'
+						: 'absolute bg-[#020461]'
 				}`}
 			>
 				<div className="container">
@@ -87,19 +87,23 @@ const Header = () => {
 									className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
 								>
 									<span
-										className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
+										className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 ${
+											sticky ? 'bg-[#000]' : 'bg-white'
+										} ${
 											navbarOpen
 												? ' top-[7px] rotate-45'
 												: ' '
 										}`}
 									/>
 									<span
-										className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-											navbarOpen ? 'opacity-0 ' : ' '
-										}`}
+										className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 ${
+											sticky ? 'bg-[#000]' : 'bg-white'
+										} ${navbarOpen ? 'opacity-0 ' : ' '}`}
 									/>
 									<span
-										className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
+										className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 ${
+											sticky ? 'bg-[#000]' : 'bg-white'
+										} ${
 											navbarOpen
 												? ' top-[-8px] -rotate-45'
 												: ' '
@@ -108,7 +112,7 @@ const Header = () => {
 								</button>
 								<nav
 									id="navbarCollapse"
-									className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white py-4 px-6 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+									className={`navbar absolute right-0 z-30 bottom-0 left-0 top-[100%] h-[100vh] lg:h-auto rounded border-[.5px] border-body-color/50 py-4 px-6 duration-300 dark:border-body-color/20 bg-white lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
 										navbarOpen
 											? 'visibility top-full opacity-100'
 											: 'invisible top-[120%] opacity-0'
@@ -116,11 +120,13 @@ const Header = () => {
 								>
 									<ul className="block lg:flex lg:space-x-12">
 										{menuData.map((menuItem, index) => {
-											const classed =
-												menuItem.path ===
-												pathname?.toString()
-													? styles.active
-													: '';
+											const listPath =
+												pathname.split('/');
+											const classed = listPath.includes(
+												menuItem.title.toLowerCase(),
+											)
+												? styles.active
+												: '';
 											return (
 												<li
 													key={menuItem.id}
@@ -129,7 +135,11 @@ const Header = () => {
 													{menuItem.path ? (
 														<Link
 															href={menuItem.path}
-															className={`flex py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 ${classed}`}
+															className={`flex font-bold py-2 text-base ${
+																sticky
+																	? 'text-[#b3b3c7]'
+																	: 'text-[#b3b3c7] lg:text-white'
+															}  lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 ${classed}`}
 														>
 															{menuItem.title}
 														</Link>
@@ -141,10 +151,14 @@ const Header = () => {
 																		index,
 																	)
 																}
-																className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0"
+																className={`flex cursor-pointer items-center justify-between py-2 text-base ${
+																	sticky
+																		? 'text-[#b3b3c7]'
+																		: 'text-[#b3b3c7] lg:text-white'
+																} hover:text-dark transition-all duration-300 lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 font-bold ${classed}`}
 															>
 																{menuItem.title}
-																<span className="pl-3">
+																<span className="pl-2">
 																	<svg
 																		width="15"
 																		height="14"
@@ -158,7 +172,7 @@ const Header = () => {
 																</span>
 															</a>
 															<div
-																className={`submenu relative top-full left-0 rounded-md bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
+																className={`submenu relative top-full left-0 rounded-[17px] bg-white transition-[top] duration-300 group-hover:opacity-[1] lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
 																	openIndex ===
 																	index
 																		? 'block'
@@ -184,7 +198,14 @@ const Header = () => {
 																			key={
 																				submenuItem.id
 																			}
-																			className="block rounded py-2.5 text-sm text-dark hover:opacity-70 dark:text-white lg:px-3"
+																			className={`block rounded font-bold py-2.5 text-sm text-[#b3b3c7] hover:text-dark transition-all duration-300 ${
+																				listPath[
+																					listPath.length -
+																						1
+																				] ===
+																					submenuItem.title.toLowerCase() &&
+																				styles.active
+																			} lg:px-3`}
 																		>
 																			{
 																				submenuItem.title
@@ -206,7 +227,11 @@ const Header = () => {
 									<>
 										<Link
 											href={routers.signin}
-											className="hidden py-3 px-7 text-base font-bold text-dark hover:opacity-70 dark:text-white md:block"
+											className={`hidden py-3 px-7 text-base font-bold ${
+												sticky
+													? 'text-dark'
+													: 'text-white'
+											} hover:opacity-70 md:block`}
 										>
 											Sign In
 										</Link>

@@ -50,11 +50,12 @@ export default function RootLayout({
 				></script>
 				<title>{`IFX EXPO - ${process.env.NEXT_PUBLIC_TITLE_APP}`}</title>
 			</head>
-			<body className="dark:bg-black">
+			<body>
 				<UseProvider>
 					<Providers>
 						<Header />
-						{children}
+						{/* className="lg:pt-[150px]" */}
+						<div>{children}</div>
 						<Footer />
 						<ScrollToTop />
 					</Providers>

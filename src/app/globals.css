@@ -15,12 +15,13 @@
 			url('/fonts/Geomanist/Geomanist-Ultra.otf') format('opentype');
 	}
 	body {
-		background-image: url('../../public/images/background/home_background.png');
-		height: 100%;
+		/* background-image: url('../../public/images/background/home_background.png');
 		background-attachment: fixed;
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-position: center;
+		background-position: center; */
+		background-color: #f6f7ff !important;
+		height: 100%;
 		overflow-x: hidden !important;
 	}
 	body::-webkit-scrollbar {

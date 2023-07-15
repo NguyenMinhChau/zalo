@@ -8,7 +8,7 @@ function EventSchedule() {
 		<div className="my-5 container">
 			<div
 				data-aos="fade-right"
-				className="font-bold text-2xl lg:text-4xl dark:text-white mb-3"
+				className="font-bold text-2xl lg:text-4xl text-[#000] mb-3"
 			>
 				EVENT SCHEDULE
 			</div>

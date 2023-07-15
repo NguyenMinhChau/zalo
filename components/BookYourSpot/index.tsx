@@ -53,7 +53,7 @@ const LIST_PRICE: ListPriceType[] = [
 ];
 function BookYourSpot() {
 	return (
-		<div style={{ backgroundColor: 'rgba(0,0,0,0.5)' }} className="pb-2">
+		<div style={{ backgroundColor: '#000' }} className="pb-2">
 			<div className="container">
 				<h1
 					className="text-center text-5xl lg:text-8xl font-bold"

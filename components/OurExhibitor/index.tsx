@@ -43,11 +43,11 @@ function OurExhibitor() {
 	return (
 		<div
 			className="p-3 rounded-md mt-3"
-			style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}
+			style={{ backgroundColor: '#000' }}
 			data-aos="fade-right"
 		>
 			<div className="flex">
-				<h1 className="font-bold dark:text-white text-2xl lg:text-4xl">
+				<h1 className="font-bold text-white text-2xl lg:text-4xl">
 					Our Exhibitor
 				</h1>
 				<div className="flex-1 border-b-2 mx-1 border-b-yellow"></div>

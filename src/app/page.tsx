@@ -20,7 +20,7 @@ export default function Home() {
 		<div className={`${styles.image_bgc} pb-3`}>
 			<Hero />
 			<DiscoverHome />
-			<div data-aos="flip-left">
+			<div data-aos="flip-left w-full">
 				<Image src={Image_Discover_Event} alt="image" />
 			</div>
 			<EventSchedule />
@@ -28,7 +28,7 @@ export default function Home() {
 			<OurExhibitor />
 			<DiscussHome />
 			<BookYourSpot />
-			<EngageHome />
+			{/* <EngageHome /> */}
 		</div>
 	);
 }
