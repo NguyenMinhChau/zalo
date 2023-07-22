@@ -1,13 +1,9 @@
 export { default as Header } from './Header/';
 export { default as Footer } from './Footer/';
 export { default as Hero } from './Hero/';
-export { default as DiscoverHome } from './DiscoverHome/';
-export { default as EventSchedule } from './EventSchedule/';
-export { default as MeetSponsers } from './MeetSponsers/';
-export { default as OurExhibitor } from './OurExhibitor/';
-export { default as DiscussHome } from './DiscussHome/';
-export { default as BookYourSpot } from './BookYourSpot/';
-export { default as EngageHome } from './EngageHome/';
+export { default as TechnologiesCP } from './Technologies/';
+export { default as ProductsCP } from './Products/';
+export { default as TellMeMoreCP } from './TellMeMore/';
 export { default as SliderImage } from './SliderImage/';
 export { default as ScrollToTop } from './ScrollToTop/';
 export { default as SkeletonCP } from './SkeletonCP/';

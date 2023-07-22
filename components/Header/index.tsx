@@ -47,7 +47,7 @@ const Header = () => {
 	return (
 		<>
 			<header
-				className={`header top-0 left-0 z-40 flex w-full items-center bg-transparent ${
+				className={`header top-0 left-0 z-40 flex w-full items-center bg-[#020461] ${
 					sticky
 						? '!fixed !z-[9999] !bg-white shadow-sticky !transition'
 						: 'absolute bg-[#020461]'
