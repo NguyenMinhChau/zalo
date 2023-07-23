@@ -4,6 +4,8 @@ export { default as Hero } from './Hero/';
 export { default as TechnologiesCP } from './Technologies/';
 export { default as ProductsCP } from './Products/';
 export { default as TellMeMoreCP } from './TellMeMore/';
+export { default as ExperimentsCP } from './Experiments/';
+export { default as GetAPICP } from './GetAPI/';
 export { default as SliderImage } from './SliderImage/';
 export { default as ScrollToTop } from './ScrollToTop/';
 export { default as SkeletonCP } from './SkeletonCP/';

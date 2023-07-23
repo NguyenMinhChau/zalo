@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
 import { styled } from '@mui/material';
-import Image01 from '../../public/images/TellMore/image_01.png';
+import BackgroundAPI from '../../public/images/getAPI/background.png';
+import Image01 from '../../public/images/getAPI/image_01.png';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -42,29 +43,32 @@ const ItemStylesContainer: any = styled('div')(
 	}),
 );
 
-export default function TellMeMoreCP() {
+export default function GetAPICP() {
 	return (
-		<div className="w-full h-full">
+		<div
+			className="w-full h-full"
+			style={{
+				background: `url(${BackgroundAPI?.src})`,
+				backgroundSize: '100% 100%',
+				backgroundRepeat: 'no-repeat',
+				backgroundPosition: 'center',
+			}}
+		>
 			<div className="px-[30px] py-[40px]">
 				<ItemStylesContainer cols={2} spacing="8px">
 					<div className="item_content flex flex-col justify-center items-start">
 						<div className="text-black text-[30px] font-bold mb-2">
-							Electronic
+							For Developer
 						</div>
-						<div className="text-black text-[28px] font-bold mb-5">
-							KNOW YOUR CUSTOMER
-						</div>
-						<div className="text-[#494949] text-[16px] font-medium mb-2 ">
-							AI-Powered techonogy
-						</div>
-						<div className="text-[#494949] text-[16px] font-medium mb-2 ">
-							Securely and accurately identify your customer.
+						<div className="text-[#494949] text-[16px] font-medium mb-2">
+							Login to get Zalo AI’s documentation and start
+							integrating these API to your own project.
 						</div>
 						<Link
 							href="##"
 							className="font-bold text-center text-[18px] mt-3 text-white rounded-md bg-black w-[50%] py-2 uppercase"
 						>
-							Tell me more
+							Get API
 						</Link>
 					</div>
 					<div className="item_content">
