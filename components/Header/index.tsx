@@ -114,10 +114,10 @@ const Header = () => {
 								</button>
 								<nav
 									id="navbarCollapse"
-									className={`navbar overflow-auto lg:overflow-visible md:mr-[-2.8vh] md:ml-[-2.8vh] absolute right-0 z-30 bottom-0 left-0 top-[0] h-[100vh] lg:h-auto rounded border-[.5px] border-body-color/50 py-4 px-6 duration-300 dark:border-body-color/20 bg-white lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+									className={`navbar overflow-auto lg:overflow-visible md:mr-[-2.8vh] md:ml-[-2.8vh] absolute right-0 z-30 bottom-0 left-0 top-0 h-[100vh] lg:h-auto rounded border-[.5px] border-body-color/50 py-4 px-6 duration-300 dark:border-body-color/20 bg-white lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
 										navbarOpen
-											? 'visibility top-full opacity-100'
-											: 'invisible top-[120%] opacity-0'
+											? 'visibility top-0 opacity-100'
+											: 'invisible top-0 opacity-0'
 									}`}
 								>
 									<div className="flex items-start lg:hidden justify-between h-[15vh]">
