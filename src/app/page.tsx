@@ -13,13 +13,15 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
 	return (
-		<div className={`${styles.image_bgc} pb-3`}>
+		<>
 			<Hero />
-			<TechnologiesCP />
-			<ProductsCP />
-			<TellMeMoreCP />
-			<ExperimentsCP />
-			<GetAPICP />
-		</div>
+			<div className={`${styles.image_bgc} pb-3`}>
+				<TechnologiesCP />
+				<ProductsCP />
+				<TellMeMoreCP />
+				<ExperimentsCP />
+				<GetAPICP />
+			</div>
+		</>
 	);
 }

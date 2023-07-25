@@ -6,8 +6,8 @@ import Zalo from '../../public/images/footer/zalo.png';
 const Footer = () => {
 	return (
 		<>
-			<div className="bg-[#01002e] p-2 flex justify-between items-center">
-				<div className="lg:flex md:flex items-center justify-center hidden">
+			<div className="bg-[#01002e] p-2 flex flex-col gap-3 lg:flex-row md:flex-row justify-between items-center">
+				<div className=" items-center justify-center">
 					<Link href="/" className="inline-block w-48">
 						<Image
 							src={LogoDark}
@@ -39,7 +39,7 @@ const Footer = () => {
 						. All rights reserved.
 					</p>
 				</div>
-				<div className="lg:flex md:flex hidden gap-2 items-center justify-center mr-16">
+				<div className="flex gap-2 items-center justify-center lg:mr-16 md:mr-16">
 					<p className="text-center text-base text-white ">Share:</p>
 					<Link href="/" className="inline-block">
 						<i className="fa-brands fa-facebook text-[20px]"></i>

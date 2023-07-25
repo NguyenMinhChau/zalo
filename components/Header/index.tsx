@@ -7,9 +7,11 @@ import menuData from './menuData';
 import { usePathname } from 'next/navigation';
 import styles from './Header.module.css';
 import LogoDark from '../../public/images/logo/logo_dark.png';
+import LogoZalo from '../../public/images/footer/zalo.png';
 import ButtonAuthenMobile from './buttonAuthenMobile';
 import routers from '../../routers/routers';
 import { useAppContext } from '../../helpers';
+import { Button } from '@mui/material';
 
 const Header = () => {
 	const { state } = useAppContext();
@@ -112,12 +114,44 @@ const Header = () => {
 								</button>
 								<nav
 									id="navbarCollapse"
-									className={`navbar absolute right-0 z-30 bottom-0 left-0 top-[100%] h-[100vh] lg:h-auto rounded border-[.5px] border-body-color/50 py-4 px-6 duration-300 dark:border-body-color/20 bg-white lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+									className={`navbar overflow-auto lg:overflow-visible md:mr-[-2.8vh] md:ml-[-2.8vh] absolute right-0 z-30 bottom-0 left-0 top-[0] h-[100vh] lg:h-auto rounded border-[.5px] border-body-color/50 py-4 px-6 duration-300 dark:border-body-color/20 bg-white lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
 										navbarOpen
 											? 'visibility top-full opacity-100'
 											: 'invisible top-[120%] opacity-0'
 									}`}
 								>
+									<div className="flex items-start lg:hidden justify-between h-[15vh]">
+										<Image
+											src={LogoDark}
+											alt="logo"
+											width={200}
+											height={100}
+											className="hidden dark:block"
+										/>
+										<div
+											className="text-[#000]"
+											onClick={navbarToggleHandler}
+										>
+											<i className="fa-solid fa-xmark text-[40px]"></i>
+										</div>
+									</div>
+									<div className="flex lg:hidden gap-2 items-center justify-between mb-4">
+										<div className="flex-1 flex items-center gap-2">
+											<Image
+												src={LogoZalo}
+												alt="logo"
+												width={30}
+												height={30}
+												className="hidden dark:block rounded-[50%]"
+											/>
+											<div className="font-bold text-[#000] text-[16px] uppercase">
+												IFX EXPO
+											</div>
+										</div>
+										<div className="text-[#000]">
+											<i className="fa-solid fa-angle-down text-[15px]"></i>
+										</div>
+									</div>
 									<ul className="block lg:flex lg:space-x-12">
 										{menuData.map((menuItem, index) => {
 											const listPath =
@@ -220,6 +254,25 @@ const Header = () => {
 											);
 										})}
 									</ul>
+									<div className="flex lg:hidden flex-col mb-auto h-[inherit] items-center justify-center w-full gap-3 mt-5">
+										<Button
+											variant="outlined"
+											color="secondary"
+											className="w-full"
+										>
+											Logout
+										</Button>
+										<div className="text-[#000]">
+											Copyright ©{' '}
+											<Link
+												href="/"
+												className="font-bold text-primary"
+											>
+												IFX EXPO
+											</Link>
+											. All rights reserved.
+										</div>
+									</div>
 								</nav>
 							</div>
 							<div className="flex items-center justify-end pr-16 lg:pr-0">
