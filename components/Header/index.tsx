@@ -6,7 +6,8 @@ import { useEffect, useState } from 'react';
 import menuData from './menuData';
 import { usePathname } from 'next/navigation';
 import styles from './Header.module.css';
-import LogoDark from '../../public/images/logo/logo_dark.png';
+import LogoDark from '../../public/images/logo/logo_dark_01.png';
+import LogoLight from '../../public/images/logo/logo_light_01.png';
 import LogoZalo from '../../public/images/footer/zalo.png';
 import ButtonAuthenMobile from './buttonAuthenMobile';
 import routers from '../../routers/routers';
@@ -46,13 +47,22 @@ const Header = () => {
 	};
 	const pathname = usePathname();
 	const handleLogout = () => {};
+	const isCheckPage =
+		pathname.includes(routers.signin) ||
+		pathname.includes(routers.singup) ||
+		pathname.includes(routers.forgorpwd) ||
+		pathname.includes(routers.verifyOtp);
 	return (
 		<>
 			<header
-				className={`header top-0 left-0 z-40 flex w-full items-center bg-[#020461] ${
+				className={`header top-0 left-0 z-40 flex w-full items-center ${
+					isCheckPage ? 'bg-[#020461]' : 'bg-transparent'
+				} ${
 					sticky
 						? '!fixed !z-[9999] !bg-white shadow-sticky !transition'
-						: 'absolute bg-[#020461]'
+						: `absolute  ${
+								isCheckPage ? 'bg-[#020461]' : 'bg-transparent'
+						  }`
 				}`}
 			>
 				<div className="container">
@@ -72,7 +82,7 @@ const Header = () => {
 									className="w-full dark:hidden"
 								/> */}
 								<Image
-									src={LogoDark}
+									src={sticky ? LogoLight : LogoDark}
 									alt="logo"
 									width={140}
 									height={30}
@@ -129,7 +139,7 @@ const Header = () => {
 											className="hidden dark:block"
 										/>
 										<div
-											className="text-[#000]"
+											className="text-[gray] cursor-pointer"
 											onClick={navbarToggleHandler}
 										>
 											<i className="fa-solid fa-xmark text-[40px]"></i>

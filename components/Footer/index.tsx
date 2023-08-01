@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import LogoDark from '../../public/images/logo/logo_dark.png';
+import LogoDark from '../../public/images/logo/logo_dark_01.png';
 import Zalo from '../../public/images/footer/zalo.png';
 
 const Footer = () => {

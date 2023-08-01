@@ -4,127 +4,59 @@ import { Menu } from '../../types/menu';
 const menuData: Menu[] = [
 	{
 		id: 1,
-		title: 'Discover',
+		title: 'Home',
 		newTab: false,
-		submenu: [
-			{
-				id: 11,
-				title: 'About',
-				path: routers.about,
-				newTab: false,
-			},
-			{
-				id: 12,
-				title: 'Parties',
-				path: routers.parties,
-				newTab: false,
-			},
-			{
-				id: 13,
-				title: 'Gallery',
-				path: routers.gallery,
-				newTab: false,
-			},
-			{
-				id: 14,
-				title: 'Video',
-				path: routers.video,
-				newTab: false,
-			},
-		],
+		path: routers.home,
 	},
 	{
 		id: 2,
-		title: 'Meet',
+		title: 'Technologies',
 		newTab: false,
 		submenu: [
 			{
 				id: 21,
-				title: 'Sponsers',
-				path: routers.sponsers,
+				title: 'Computer Vision',
+				path: routers.computerVision,
 				newTab: false,
 			},
 			{
 				id: 22,
-				title: 'Exhibitor',
-				path: routers.exhibitor,
+				title: 'Speed Processing',
+				path: routers.speedProcessing,
 				newTab: false,
 			},
 			{
 				id: 23,
-				title: 'Media Partners',
-				path: routers.mediaPartners,
+				title: 'Natural Language Processing',
+				path: routers.naturalLanguageProcessing,
 				newTab: false,
 			},
 			{
 				id: 24,
-				title: 'Attendees',
-				path: routers.attendess,
+				title: 'Data Mining',
+				path: routers.dataMining,
 				newTab: false,
 			},
 		],
 	},
 	{
 		id: 3,
-		title: 'Discuss',
+		title: 'Products',
 		newTab: false,
 		submenu: [
 			{
 				id: 31,
-				title: 'Agenda',
-				path: routers.agenda,
-				newTab: false,
-			},
-			{
-				id: 32,
-				title: 'Speakers',
-				path: routers.speakers,
+				title: 'Experiments Project',
+				path: routers.experimentsProject,
 				newTab: false,
 			},
 		],
 	},
 	{
 		id: 4,
-		title: 'Engage',
+		title: 'Pricing',
 		newTab: false,
-		submenu: [
-			{
-				id: 41,
-				title: 'Floorplan',
-				path: routers.floorplan,
-				newTab: false,
-			},
-			{
-				id: 42,
-				title: 'FAQ',
-				path: routers.faq,
-				newTab: false,
-			},
-			{
-				id: 43,
-				title: 'Venue',
-				path: routers.venue,
-				newTab: false,
-			},
-			{
-				id: 44,
-				title: 'Transportation',
-				path: routers.transportation,
-				newTab: false,
-			},
-			{
-				id: 45,
-				title: 'Accommodation',
-				path: routers.accommodation,
-				newTab: false,
-			},
-			{
-				id: 46,
-				title: 'Contact us',
-				path: routers.contact,
-				newTab: false,
-			},
-		],
+		path: routers.pricing,
 	},
 ];
 export default menuData;

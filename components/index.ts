@@ -1,6 +1,7 @@
 export { default as Header } from './Header/';
 export { default as Footer } from './Footer/';
 export { default as Hero } from './Hero/';
+export { default as HeroGeneral } from './HeroGeneral/';
 export { default as TechnologiesCP } from './Technologies/';
 export { default as ProductsCP } from './Products/';
 export { default as TellMeMoreCP } from './TellMeMore/';

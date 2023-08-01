@@ -37,7 +37,7 @@ export default function RootLayout({
 				/>
 				<meta
 					property="og:image"
-					content="./images/logo/meta_org_image.png"
+					content="./images/logo/logo_light_01.png"
 				/>
 				<script
 					defer
@@ -48,7 +48,7 @@ export default function RootLayout({
 					defer
 					src="https://unpkg.com/aos@2.3.1/dist/aos.js"
 				></script>
-				<title>{`IFX EXPO - ${process.env.NEXT_PUBLIC_TITLE_APP}`}</title>
+				<title>{`Zalo - ${process.env.NEXT_PUBLIC_TITLE_APP}`}</title>
 			</head>
 			<body>
 				<UseProvider>
