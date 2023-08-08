@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { styled } from '@mui/material';
+import BackgroundTN from '../../public/images/technologies/background.png';
 import Image01 from '../../public/images/TellMore/image_01.png';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,22 +16,22 @@ const ItemStylesContainer: any = styled('div')(
 	({ theme, cols, spacing }: ItemStylesContainerType) => ({
 		display: 'flex',
 		flexWrap: 'wrap',
-		justifyContent: 'center',
+		justifyContent: 'space-between',
 		gap: '16px',
 		width: '100%',
 		height: '100%',
 		'& .item_content': {
 			// mobile
 			[theme.breakpoints.up('xs')]: {
-				flex: `1 1 calc((100% / 1) - (${spacing} * 2))`,
+				width: '100%',
 			},
 			// Tablet
 			[theme.breakpoints.between('sm', 'md')]: {
-				flex: `1 1 calc((100% / 2) - (${spacing} * 2))`,
+				width: '300px',
 			},
 			// PC
 			[theme.breakpoints.up('lg')]: {
-				flex: `1 1 calc((100% / ${cols}) - (${spacing} * 2))`,
+				width: '350px',
 			},
 			borderRadius: '8px',
 			display: 'flex',
@@ -44,8 +45,16 @@ const ItemStylesContainer: any = styled('div')(
 
 export default function TellMeMoreCP() {
 	return (
-		<div className="w-full h-full">
-			<div className="px-[30px] py-[40px]">
+		<div
+			className="w-full h-full flex justify-center items-center"
+			style={{
+				backgroundImage: `url(${BackgroundTN?.src})`,
+				backgroundSize: '100% 100%',
+				backgroundRepeat: 'no-repeat',
+				backgroundPosition: 'center',
+			}}
+		>
+			<div className="px-[30px] py-[40px] w-full lg:w-[1170px] lg:px-[55px]">
 				<ItemStylesContainer cols={2} spacing="8px">
 					<div className="item_content flex flex-col justify-center items-start">
 						<div className="text-black text-[30px] font-bold mb-2">

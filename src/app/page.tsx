@@ -1,3 +1,4 @@
+'use client';
 import { Inter } from 'next/font/google';
 import {
 	Hero,
@@ -20,7 +21,6 @@ export default function Home() {
 				<ProductsCP />
 				<TellMeMoreCP />
 				<ExperimentsCP />
-				<GetAPICP />
 			</div>
 		</>
 	);

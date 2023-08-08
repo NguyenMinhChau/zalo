@@ -55,7 +55,7 @@ const Header = () => {
 	return (
 		<>
 			<header
-				className={`header top-0 left-0 z-40 flex w-full items-center ${
+				className={`header top-0 left-0 z-40 flex w-full items-center lg:px-[55px] ${
 					isCheckPage ? 'bg-[#020461]' : 'bg-transparent'
 				} ${
 					sticky
@@ -90,7 +90,7 @@ const Header = () => {
 								/>
 							</Link>
 						</div>
-						<div className="flex w-full items-center justify-between px-4">
+						<div className="flex w-full items-center justify-end px-4">
 							<div>
 								<button
 									onClick={navbarToggleHandler}
@@ -216,7 +216,7 @@ const Header = () => {
 																</span>
 															</a>
 															<div
-																className={`submenu relative top-full left-0 rounded-[17px] bg-white transition-[top] duration-300 group-hover:opacity-[1] lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
+																className={`submenu relative top-full right-0 rounded-[17px] bg-white transition-[top] duration-300 group-hover:opacity-[1] lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
 																	openIndex ===
 																	index
 																		? 'block'
@@ -284,41 +284,6 @@ const Header = () => {
 										</div>
 									</div>
 								</nav>
-							</div>
-							<div className="flex items-center justify-end pr-16 lg:pr-0">
-								{!currentUser ? (
-									<>
-										<Link
-											href={routers.signin}
-											className={`hidden py-3 px-7 text-base font-bold ${
-												sticky
-													? 'text-dark'
-													: 'text-white'
-											} hover:opacity-70 md:block`}
-										>
-											Sign In
-										</Link>
-										<Link
-											href={routers.singup}
-											className="ease-in-up hidden rounded-md bg-primary py-3 px-8 text-base font-bold text-white transition duration-300 hover:bg-opacity-90 hover:shadow-signUp md:block md:px-9 lg:px-6 xl:px-9"
-										>
-											Sign Up
-										</Link>
-									</>
-								) : (
-									<div
-										onClick={handleLogout}
-										className="ease-in-up hidden rounded-md bg-primary py-3 px-8 text-base font-bold text-white transition duration-300 hover:bg-opacity-90 hover:shadow-signUp md:block md:px-9 lg:px-6 xl:px-9 cursor-pointer"
-									>
-										Sign Out
-									</div>
-								)}
-								<div>
-									<ButtonAuthenMobile />
-								</div>
-								{/* <div>
-									<ThemeToggler />
-								</div> */}
 							</div>
 						</div>
 					</div>

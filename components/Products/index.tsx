@@ -17,21 +17,22 @@ const ItemStylesContainer: any = styled('div')(
 	({ theme, cols, spacing }: ItemStylesContainerType) => ({
 		display: 'flex',
 		flexWrap: 'wrap',
+		justifyContent: 'space-between',
 		gap: '16px',
 		width: '100%',
 		height: '100%',
 		'& .item_content': {
 			// mobile
 			[theme.breakpoints.up('xs')]: {
-				flex: `1 1 calc((100% / 1) - (${spacing} * 2))`,
+				width: '100%',
 			},
 			// Tablet
 			[theme.breakpoints.between('sm', 'md')]: {
-				flex: `1 1 calc((100% / 2) - (${spacing} * 2))`,
+				width: '350px',
 			},
 			// PC
 			[theme.breakpoints.up('lg')]: {
-				flex: `1 1 calc((100% / ${cols}) - (${spacing} * 2))`,
+				width: '330px',
 			},
 			borderRadius: '8px',
 			backgroundColor: '#fff',
@@ -48,8 +49,8 @@ const ItemStylesContainer: any = styled('div')(
 
 export default function ProductsCP() {
 	return (
-		<div className="w-full h-full">
-			<div className="px-[30px] py-[40px]">
+		<div className="w-full h-full flex justify-center items-center">
+			<div className="px-[30px] py-[40px] lg:w-[1170px] lg:px-[55px]">
 				<div className="font-bold text-[30px] text-[#0142f8] mb-2">
 					Products
 				</div>
@@ -81,13 +82,7 @@ export default function ProductsCP() {
 									href="##"
 									className="border border-[#ccc] text-center rounded-md py-2 w-[50%] hover:bg-black hover:text-white transition-all duration-200"
 								>
-									Demo
-								</Link>
-								<Link
-									href="##"
-									className="border border-[#ccc] text-center rounded-md py-2 w-[50%] hover:bg-black hover:text-white transition-all duration-200"
-								>
-									Pricing
+									View more
 								</Link>
 							</div>
 						</div>
@@ -116,13 +111,7 @@ export default function ProductsCP() {
 									href="##"
 									className="border border-[#ccc] text-center rounded-md py-2 w-[50%] hover:bg-black hover:text-white transition-all duration-200"
 								>
-									Demo
-								</Link>
-								<Link
-									href="##"
-									className="border border-[#ccc] text-center rounded-md py-2 w-[50%] hover:bg-black hover:text-white transition-all duration-200"
-								>
-									Pricing
+									View more
 								</Link>
 							</div>
 						</div>
@@ -151,13 +140,7 @@ export default function ProductsCP() {
 									href="##"
 									className="border border-[#ccc] text-center rounded-md py-2 w-[50%] hover:bg-black hover:text-white transition-all duration-200"
 								>
-									Demo
-								</Link>
-								<Link
-									href="##"
-									className="border border-[#ccc] text-center rounded-md py-2 w-[50%] hover:bg-black hover:text-white transition-all duration-200"
-								>
-									Pricing
+									View more
 								</Link>
 							</div>
 						</div>

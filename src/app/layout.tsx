@@ -1,9 +1,9 @@
 'use client';
+import { useEffect } from 'react';
 import { Footer, Header, ScrollToTop } from '../../components';
 import { Providers } from './providers';
 const AOS = require('aos');
 import './globals.css';
-import { useEffect } from 'react';
 import { UseProvider } from '../../appState/';
 
 export default function RootLayout({

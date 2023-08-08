@@ -26,15 +26,15 @@ const ItemStylesContainer: any = styled('div')(
 		'& .item_content': {
 			// mobile
 			[theme.breakpoints.up('xs')]: {
-				width: `calc((100% / 1) - (${spacing} * 2))`,
+				width: '100%',
 			},
 			// Tablet
 			[theme.breakpoints.between('sm', 'md')]: {
-				width: `calc((100% / 2) - (${spacing} * 2))`,
+				width: '350px',
 			},
 			// PC
 			[theme.breakpoints.up('lg')]: {
-				width: `calc((100% / ${cols}) - (${spacing} * 2))`,
+				width: '330px',
 			},
 			borderRadius: '8px',
 			backgroundColor: '#fff',
@@ -47,8 +47,8 @@ const ItemStylesContainer: any = styled('div')(
 
 export default function ExperimentsCP() {
 	return (
-		<div className="w-full h-full">
-			<div className="px-[30px] py-[40px]">
+		<div className="w-full h-full flex justify-center items-center">
+			<div className="px-[30px] py-[40px] w-full lg:w-[1170px] lg:px-[55px]">
 				<div className="font-bold text-[30px] text-[#0142f8] mb-7">
 					Experiments
 				</div>
