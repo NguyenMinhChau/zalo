@@ -19,8 +19,8 @@ const Hero = ({
 		<>
 			<div className="relative z-10 h-0 pb-[600px] md:pt-[102px] md:pb-[400px] xl:pt-[500px] xl:pb-[160px]">
 				<div className="absolute top-0 right-0 left-0 bottom-0">
-					<div className="w-full lg:px-[10px] md:px-[30px] px-[40px] absolute top-[35%] flex justify-center items-center">
-						<div className="lg:px-[10px] md:px-[30px] px-[40px] w-full lg:w-[1170px] absolute top-[35%] flex flex-col gap-3 ">
+					<div className="w-full absolute top-[35%] flex justify-center items-center">
+						<div className="lg:px-[10px] md:px-[30px] px-[40px] w-full lg:w-[1170px] flex flex-col gap-3 ">
 							<div className="font-bold uppercase text-[20px] lg:text-[30px] md:text-[30px] text-white">
 								{titleOne}
 							</div>

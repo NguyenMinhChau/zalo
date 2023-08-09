@@ -36,6 +36,9 @@ const ItemStylesContainer: any = styled('div')(
 			[theme.breakpoints.up('lg')]: {
 				width: '330px',
 			},
+			[theme.breakpoints.down('lg')]: {
+				width: '330px',
+			},
 			borderRadius: '8px',
 			backgroundColor: '#fff',
 			color: '#000',

@@ -35,6 +35,10 @@ const ItemStylesContainer: any = styled('div')(
 			[theme.breakpoints.up('lg')]: {
 				width: '250px',
 			},
+			[theme.breakpoints.down('lg')]: {
+				width: '250px',
+			},
+
 			borderRadius: '8px',
 			backgroundColor: '#fff',
 			// padding: '12px',
@@ -71,7 +75,7 @@ export default function TechnologiesCP() {
 								className={`flex-1 flex flex-col items-center justify-start`}
 							>
 								<div
-									className={`flex flex-col items-center justify-center group-hover:flex-row group-hover:items-center group-hover:justify-start group-hover:gap-3 duration-500 transition-all group-hover:mb-3`}
+									className={`flex w-[80%] flex-col items-center justify-center group-hover:flex-row group-hover:items-center group-hover:justify-start group-hover:gap-3 duration-500 transition-all group-hover:mb-3`}
 								>
 									<Image
 										src={ComputerVision?.src}
@@ -109,7 +113,7 @@ export default function TechnologiesCP() {
 								className={`flex-1 flex flex-col items-center justify-start`}
 							>
 								<div
-									className={`flex flex-col items-center justify-center group-hover:flex-row group-hover:items-center group-hover:justify-start group-hover:gap-3 duration-500 transition-all group-hover:mb-3`}
+									className={`flex w-[80%] flex-col items-center justify-center group-hover:flex-row group-hover:items-center group-hover:justify-start group-hover:gap-3 duration-500 transition-all group-hover:mb-3`}
 								>
 									<Image
 										src={SpeechProcessing?.src}
@@ -147,7 +151,7 @@ export default function TechnologiesCP() {
 								className={`flex-1 flex flex-col items-center justify-start`}
 							>
 								<div
-									className={`flex flex-col items-center justify-center group-hover:flex-row group-hover:items-center group-hover:justify-start group-hover:gap-3 duration-500 transition-all group-hover:mb-3`}
+									className={`flex w-[80%] flex-col items-center justify-center group-hover:flex-row group-hover:items-center group-hover:justify-start group-hover:gap-3 duration-500 transition-all group-hover:mb-3`}
 								>
 									<Image
 										src={ComputerVision?.src}
@@ -185,7 +189,7 @@ export default function TechnologiesCP() {
 								className={`flex-1 flex flex-col items-center justify-start`}
 							>
 								<div
-									className={`flex flex-col items-center justify-center group-hover:flex-row group-hover:items-center group-hover:justify-start group-hover:gap-3 duration-500 transition-all group-hover:mb-3`}
+									className={`flex w-[80%] flex-col items-center justify-center group-hover:flex-row group-hover:items-center group-hover:justify-start group-hover:gap-3 duration-500 transition-all group-hover:mb-3`}
 								>
 									<Image
 										src={SpeechProcessing?.src}

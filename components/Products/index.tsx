@@ -17,7 +17,7 @@ const ItemStylesContainer: any = styled('div')(
 	({ theme, cols, spacing }: ItemStylesContainerType) => ({
 		display: 'flex',
 		flexWrap: 'wrap',
-		justifyContent: 'space-between',
+		justifyContent: 'center',
 		gap: '16px',
 		width: '100%',
 		height: '100%',
@@ -32,6 +32,9 @@ const ItemStylesContainer: any = styled('div')(
 			},
 			// PC
 			[theme.breakpoints.up('lg')]: {
+				width: '330px',
+			},
+			[theme.breakpoints.down('lg')]: {
 				width: '330px',
 			},
 			borderRadius: '8px',
