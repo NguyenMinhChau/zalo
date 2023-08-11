@@ -18,7 +18,7 @@ const ItemStylesContainer: any = styled('div')(
 	({ theme, cols, spacing }: ItemStylesContainerType) => ({
 		display: 'flex',
 		flexWrap: 'wrap',
-		justifyContent: 'center',
+		justifyContent: 'space-between',
 		gap: '16px',
 		width: '100%',
 		height: '100%',
@@ -64,7 +64,7 @@ export default function TechnologiesCP() {
 				backgroundPosition: 'center',
 			}}
 		>
-			<div className="px-[30px] lg:px-[55px] lg:w-[1170px] py-[40px]">
+			<div className="container">
 				<div className="font-bold text-[30px] text-[#0142f8] mb-7">
 					Technologies
 				</div>

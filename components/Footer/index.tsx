@@ -7,7 +7,7 @@ const Footer = () => {
 	return (
 		<>
 			<div className="w-full bg-[#01002e] flex justify-center items-center">
-				<div className="p-2 flex flex-col w-[1260px] gap-3 lg:flex-row md:flex-row justify-between items-center">
+				<div className="p-2 flex flex-col container gap-3 lg:flex-row md:flex-row justify-between items-center">
 					<div className=" items-center justify-center">
 						<Link href="/" className="inline-block w-48">
 							<Image

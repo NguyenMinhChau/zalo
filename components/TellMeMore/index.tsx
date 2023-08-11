@@ -57,7 +57,7 @@ export default function TellMeMoreCP() {
 				backgroundPosition: 'center',
 			}}
 		>
-			<div className="px-[30px] py-[40px] w-full lg:w-[1170px] lg:px-[55px]">
+			<div className="container">
 				<ItemStylesContainer cols={2} spacing="8px">
 					<div className="item_content flex flex-col justify-center items-start">
 						<div className="text-black text-[30px] font-bold mb-2">

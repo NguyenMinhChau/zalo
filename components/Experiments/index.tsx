@@ -19,7 +19,7 @@ const ItemStylesContainer: any = styled('div')(
 		display: 'flex',
 		flexWrap: 'wrap',
 		alignItems: 'center',
-		justifyContent: 'center',
+		justifyContent: 'space-between',
 		gap: '16px',
 		width: '100%',
 		height: '100%',
@@ -51,7 +51,7 @@ const ItemStylesContainer: any = styled('div')(
 export default function ExperimentsCP() {
 	return (
 		<div className="w-full h-full flex justify-center items-center">
-			<div className="px-[30px] py-[40px] w-full lg:w-[1170px] lg:px-[55px]">
+			<div className="container">
 				<div className="font-bold text-[30px] text-[#0142f8] mb-7">
 					Experiments
 				</div>

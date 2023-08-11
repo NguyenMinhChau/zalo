@@ -55,7 +55,7 @@ const Header = () => {
 	return (
 		<>
 			<header
-				className={`header top-0 left-0 z-40 flex w-full items-center lg:px-[55px] ${
+				className={`header top-0 left-0 z-40 flex w-full items-center justify-center  ${
 					isCheckPage ? 'bg-[#020461]' : 'bg-transparent'
 				} ${
 					sticky
@@ -65,7 +65,7 @@ const Header = () => {
 						  }`
 				}`}
 			>
-				<div className="container">
+				<div className={'container'}>
 					<div className="relative -mx-4 flex items-center justify-between">
 						<div className="w-60 max-w-full px-4 xl:mr-12">
 							<Link
