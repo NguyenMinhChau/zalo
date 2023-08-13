@@ -17,25 +17,41 @@ const ItemStylesContainer: any = styled('div')(
 	({ theme, cols, spacing }: ItemStylesContainerType) => ({
 		display: 'flex',
 		flexWrap: 'wrap',
-		justifyContent: 'space-between',
+		[theme.breakpoints.up('xs')]: {
+			justifyContent: 'center',
+		},
+		// Tablet
+		[theme.breakpoints.between('sm', 'md')]: {
+			justifyContent: 'space-between',
+		},
+		// PC
+		[theme.breakpoints.up('lg')]: {
+			justifyContent: 'space-between',
+		},
+		[theme.breakpoints.between('md', 'lg')]: {
+			justifyContent: 'space-between',
+		},
 		gap: '16px',
 		width: '100%',
 		height: '100%',
 		'& .item_content': {
 			// mobile
 			[theme.breakpoints.up('xs')]: {
-				width: '100%',
+				// flex: `1 1 calc((100% / 1) - (${spacing} * 2))`,
+				width: `calc((100% / 1) - (${spacing} * 2))`,
 			},
 			// Tablet
 			[theme.breakpoints.between('sm', 'md')]: {
-				width: '350px',
+				// flex: `1 1 calc((100% / 2) - (${spacing} * 2))`,
+				width: `calc((100% / 2) - (${spacing} * 2))`,
 			},
 			// PC
 			[theme.breakpoints.up('lg')]: {
-				width: '330px',
+				// flex: `1 1 calc((100% / ${cols}) - (${spacing} * 2))`,
+				width: `calc((100% / ${cols}) - (${spacing} * 2))`,
 			},
-			[theme.breakpoints.down('lg')]: {
-				width: '330px',
+			[theme.breakpoints.between('md', 'lg')]: {
+				width: '48%',
 			},
 			borderRadius: '8px',
 			backgroundColor: '#fff',
