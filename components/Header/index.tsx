@@ -141,7 +141,7 @@ const Header = () => {
 											className="text-[#b3b3c7] cursor-pointer"
 											onClick={navbarToggleHandler}
 										>
-											<i className="fa-solid fa-xmark text-[40px]"></i>
+											<i className="fa-solid fa-xmark text-[30px]"></i>
 										</div>
 									</div>
 									<div className="flex lg:hidden gap-2 items-center justify-between mb-4 mt-6">
