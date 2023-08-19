@@ -131,9 +131,9 @@ const Header = () => {
 								>
 									<div className="flex items-start lg:hidden justify-between h-[15vh]">
 										<Image
-											src={LogoDark}
+											src={LogoLight}
 											alt="logo"
-											width={200}
+											width={150}
 											height={100}
 											className="hidden dark:block"
 										/>

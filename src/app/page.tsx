@@ -6,7 +6,6 @@ import {
 	ProductsCP,
 	TellMeMoreCP,
 	ExperimentsCP,
-	GetAPICP,
 } from '../../components';
 import styles from './page.module.css';
 
