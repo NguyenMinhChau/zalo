@@ -9,7 +9,6 @@ import styles from './Header.module.css';
 import LogoDark from '../../public/images/logo/logo_dark_01.png';
 import LogoLight from '../../public/images/logo/logo_light_01.png';
 import LogoZalo from '../../public/images/footer/zalo.png';
-import ButtonAuthenMobile from './buttonAuthenMobile';
 import routers from '../../routers/routers';
 import { useAppContext } from '../../helpers';
 import { Button } from '@mui/material';
@@ -65,7 +64,7 @@ const Header = () => {
 						  }`
 				}`}
 			>
-				<div className={'container'}>
+				<div className={`${navbarOpen ? 'w-full' : 'container'}`}>
 					<div className="relative -mx-4 flex items-center justify-between">
 						<div className="w-60 max-w-full px-4 xl:mr-12">
 							<Link
@@ -124,7 +123,7 @@ const Header = () => {
 								</button>
 								<nav
 									id="navbarCollapse"
-									className={`navbar overflow-auto lg:overflow-visible md:mr-[-2.8vh] md:ml-[-2.8vh] absolute right-0 z-30 bottom-0 left-0 top-0 h-[100vh] lg:h-auto rounded border-[.5px] border-body-color/50 py-4 px-6 duration-300 dark:border-body-color/20 bg-white lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+									className={`navbar overflow-auto lg:overflow-visible absolute right-0 z-30 bottom-0 left-0 top-0 h-[100vh] lg:h-auto rounded border-[.5px] border-body-color/50 py-4 px-10 duration-300 dark:border-body-color/20 bg-white lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
 										navbarOpen
 											? 'visibility top-0 opacity-100'
 											: 'invisible top-0 opacity-0'
@@ -139,13 +138,13 @@ const Header = () => {
 											className="hidden dark:block"
 										/>
 										<div
-											className="text-[gray] cursor-pointer"
+											className="text-[#b3b3c7] cursor-pointer"
 											onClick={navbarToggleHandler}
 										>
 											<i className="fa-solid fa-xmark text-[40px]"></i>
 										</div>
 									</div>
-									<div className="flex lg:hidden gap-2 items-center justify-between mb-4">
+									<div className="flex lg:hidden gap-2 items-center justify-between mb-4 mt-6">
 										<div className="flex-1 flex items-center gap-2">
 											<Image
 												src={LogoZalo}
@@ -158,7 +157,7 @@ const Header = () => {
 												IFX EXPO
 											</div>
 										</div>
-										<div className="text-[#000]">
+										<div className="text-[#b3b3c7]">
 											<i className="fa-solid fa-angle-down text-[15px]"></i>
 										</div>
 									</div>
@@ -179,6 +178,11 @@ const Header = () => {
 													{menuItem.path ? (
 														<Link
 															href={menuItem.path}
+															onClick={() => {
+																setNavbarOpen(
+																	false,
+																);
+															}}
 															className={`flex font-bold py-2 text-base ${
 																sticky
 																	? 'text-[#b3b3c7]'
@@ -264,10 +268,10 @@ const Header = () => {
 											);
 										})}
 									</ul>
-									<div className="flex lg:hidden flex-col mb-auto h-[inherit] items-center justify-center w-full gap-3 mt-5">
+									<div className="flex lg:hidden flex-col items-center justify-center w-full gap-3 mt-5">
 										<Button
 											variant="outlined"
-											color="secondary"
+											color="error"
 											className="w-full"
 										>
 											Logout
