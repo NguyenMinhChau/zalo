@@ -93,9 +93,9 @@ export default function OurClientsCP() {
 						>
 							Get API
 						</Link>
-						<div className="w-full">
+						{/* <div className="w-full">
 							<SliderImage URL_IMAGES={URL_IMAGES} />
-						</div>
+						</div> */}
 					</div>
 					<div className="item_content">
 						<div className="w-full h-[100%]">
