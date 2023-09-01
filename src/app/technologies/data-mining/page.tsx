@@ -1,4 +1,4 @@
-import { ExperimentsCP, HeroGeneral } from '../../../../components';
+import { OurLibraryCP, HeroGeneral } from '../../../../components';
 import ContentTwo from '../../../../components/ContentTwo';
 import HeroDataMining from '../../../../public/images/discover/data_mining.png';
 import ImageDataMining from '../../../../public/images/technologies/data_mining.png';
@@ -7,7 +7,7 @@ const DataMiningPage = () => {
 	return (
 		<>
 			<HeroGeneral title="Data Mining" urlImage={HeroDataMining?.src} />
-			<div className="container my-5">
+			<div className="container">
 				<ContentTwo
 					urlImage={ImageDataMining?.src}
 					desc={[
@@ -17,7 +17,7 @@ const DataMiningPage = () => {
 					]}
 					descImage="Data Mining"
 				/>
-				<ExperimentsCP />
+				<OurLibraryCP />
 			</div>
 		</>
 	);

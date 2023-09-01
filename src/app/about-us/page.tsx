@@ -1,8 +1,8 @@
-import { OurLibraryCP, HeroGeneral, OurTeamsCP } from '../../../../components';
-import ContentTwo from '../../../../components/ContentTwo';
-import ImageComputerVision from '../../../../public/images/technologies/computer_vision.png';
+import { HeroGeneral, OurTeamsCP } from '../../../components';
+import ContentTwo from '../../../components/ContentTwo';
+import ImageComputerVision from '../../../public/images/technologies/computer_vision.png';
 
-const ComputerVisionPage = () => {
+const AboutUsPage = () => {
 	return (
 		<>
 			<HeroGeneral
@@ -11,7 +11,7 @@ const ComputerVisionPage = () => {
 					`Established in 2022, Megaboom Co., Ltd. is a media, advertising, event organization and technology development service company in the financial sector.`,
 				]}
 			/>
-			<div className="container">
+			<div className="">
 				<ContentTwo
 					urlImage={ImageComputerVision?.src}
 					desc={[
@@ -36,4 +36,4 @@ const ComputerVisionPage = () => {
 	);
 };
 
-export default ComputerVisionPage;
+export default AboutUsPage;

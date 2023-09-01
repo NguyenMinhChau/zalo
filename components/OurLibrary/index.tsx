@@ -62,12 +62,12 @@ const ItemStylesContainer: any = styled('div')(
 	}),
 );
 
-export default function ExperimentsCP() {
+export default function OurLibraryCP() {
 	return (
-		<div className="w-full h-full flex justify-center items-center">
-			<div className="container">
-				<div className="font-bold text-[30px] text-[#0142f8] mb-7">
-					Experiments
+		<div className="w-full h-full flex justify-center items-center py-[70px]">
+			<div className="container lg:px-[69px] md:px-[50px]">
+				<div className="font-bold text-[30px] lg:text-[45px] md:text-[35px] text-[#0142f8] mb-7">
+					Our Library
 				</div>
 				<ItemStylesContainer cols={3} spacing="8px">
 					<div

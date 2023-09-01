@@ -6,7 +6,26 @@ const menuData: Menu[] = [
 		id: 1,
 		title: 'Home',
 		newTab: false,
-		path: routers.home,
+		submenu: [
+			{
+				id: 11,
+				title: 'About us',
+				path: routers.aboutUs,
+				newTab: false,
+			},
+			{
+				id: 12,
+				title: 'Products',
+				path: routers.products,
+				newTab: false,
+			},
+			{
+				id: 13,
+				title: 'Contact us',
+				newTab: false,
+				path: routers.contactUs,
+			},
+		],
 	},
 	{
 		id: 2,

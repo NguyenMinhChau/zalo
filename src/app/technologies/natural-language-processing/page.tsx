@@ -1,4 +1,4 @@
-import { ExperimentsCP, HeroGeneral } from '../../../../components';
+import { OurLibraryCP, HeroGeneral } from '../../../../components';
 import ContentTwo from '../../../../components/ContentTwo';
 import HeroNatural from '../../../../public/images/discover/hero_natural.png';
 import ImageNatural from '../../../../public/images/technologies/natural.png';
@@ -10,7 +10,7 @@ const NaturalLanguagePage = () => {
 				title="Natural Language Processing"
 				urlImage={HeroNatural?.src}
 			/>
-			<div className="container my-5">
+			<div className="container">
 				<ContentTwo
 					urlImage={ImageNatural?.src}
 					desc={[
@@ -20,7 +20,7 @@ const NaturalLanguagePage = () => {
 					]}
 					descImage="Natural Language Processing"
 				/>
-				<ExperimentsCP />
+				<OurLibraryCP />
 			</div>
 		</>
 	);

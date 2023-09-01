@@ -1,4 +1,4 @@
-import { ExperimentsCP, HeroGeneral } from '../../../../components';
+import { OurLibraryCP, HeroGeneral } from '../../../../components';
 import ContentTwo from '../../../../components/ContentTwo';
 import HeroSpeed from '../../../../public/images/discover/hero_speed.png';
 import ImageSpeed from '../../../../public/images/technologies/speech_processing.png';
@@ -7,7 +7,7 @@ const SpeedProcessingPage = () => {
 	return (
 		<>
 			<HeroGeneral title="Speech Processing" urlImage={HeroSpeed?.src} />
-			<div className="container my-5">
+			<div className="container">
 				<ContentTwo
 					urlImage={ImageSpeed?.src}
 					desc={[
@@ -17,7 +17,7 @@ const SpeedProcessingPage = () => {
 					]}
 					descImage="Speech Processing"
 				/>
-				<ExperimentsCP />
+				<OurLibraryCP />
 			</div>
 		</>
 	);

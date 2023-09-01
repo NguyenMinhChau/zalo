@@ -1,12 +1,10 @@
 'use client';
 import React from 'react';
 import { styled } from '@mui/material';
-import Image01 from '../../public/images/products/image_01.png';
-import Image02 from '../../public/images/products/image_02.png';
-import Image03 from '../../public/images/products/image_03.png';
-import Image from 'next/image';
-import Link from 'next/link';
-import ProductItem from './ProductItem';
+import BackgroundTN from '../../public/images/technologies/background.png';
+import ComputerVision from '../../public/images/technologies/computer_vision.png';
+import SpeechProcessing from '../../public/images/technologies/speech_processing.png';
+import CoreValueItem from './CoreValueItem';
 import routers from '../../routers/routers';
 
 type ItemStylesContainerType = {
@@ -19,6 +17,7 @@ const ItemStylesContainer: any = styled('div')(
 	({ theme, cols, spacing }: ItemStylesContainerType) => ({
 		display: 'flex',
 		flexWrap: 'wrap',
+
 		[theme.breakpoints.up('xs')]: {
 			justifyContent: 'center',
 		},
@@ -55,6 +54,7 @@ const ItemStylesContainer: any = styled('div')(
 			[theme.breakpoints.between('md', 'lg')]: {
 				width: '48%',
 			},
+
 			borderRadius: '8px',
 			backgroundColor: '#fff',
 			display: 'flex',
@@ -62,40 +62,52 @@ const ItemStylesContainer: any = styled('div')(
 			alignItems: 'center',
 			justifyContent: 'space-between',
 			color: '#000',
-			minHeight: '350px',
 			overflow: 'hidden',
 		},
 	}),
 );
 
-export default function ProductsCP() {
+export default function CoreValueCP() {
 	return (
-		<div className="w-full h-full flex justify-center items-center py-[70px]">
+		<div
+			className="w-full h-full flex justify-center items-center py-[70px]"
+			style={{
+				backgroundImage: `url(${BackgroundTN?.src})`,
+				backgroundSize: '100% 100%',
+				backgroundRepeat: 'no-repeat',
+				backgroundPosition: 'center',
+			}}
+		>
 			<div className="container lg:px-[69px] md:px-[50px]">
-				<div className="font-bold text-[30px] lg:text-[45px] md:text-[35px] text-[#0142f8] mb-2">
-					Products
+				<div className="font-bold text-[30px] lg:text-[45px] md:text-[35px] text-[#0142f8] mb-6">
+					Core Values
 				</div>
-				<div className="text-[20px] mb-7 text-[#494949]">
-					Empower the opportunities and connections
-				</div>
-				<ItemStylesContainer cols={3} spacing="8px">
-					<ProductItem
-						title="Ecological system"
-						desc="Design the own system of communication channels to create qualified acquisition funnel"
-						urlImage={Image01?.src}
-						urlLink={routers.products}
+				<ItemStylesContainer cols={4} spacing="8px">
+					<CoreValueItem
+						title="Maximization"
+						desc="Optimize the process and available resources with best practice"
+						urlImage={ComputerVision?.src}
+						urlLink={routers.aboutUs}
 					/>
-					<ProductItem
-						title="Branding services"
-						desc="Connect reliable companies to customers and agency partners through offline/online events."
-						urlImage={Image02?.src}
-						urlLink={routers.products}
+					<CoreValueItem
+						title="Ecosystem"
+						desc="Bring on the comprehensive ecosystem through bespoke solutions"
+						urlImage={SpeechProcessing?.src}
+						urlLink={routers.aboutUs}
 					/>
-					<ProductItem
-						title="Automated tools"
-						desc="Develop automated support tools which help saving time transaction across platforms."
-						urlImage={Image03?.src}
-						urlLink={routers.products}
+
+					<CoreValueItem
+						title="Growth"
+						desc="Obtain the sustainability and clear roadmap of growth"
+						urlImage={ComputerVision?.src}
+						urlLink={routers.aboutUs}
+					/>
+
+					<CoreValueItem
+						title="Accessibility"
+						desc="Reach out connections in the community and diverse platforms"
+						urlImage={SpeechProcessing?.src}
+						urlLink={routers.aboutUs}
 					/>
 				</ItemStylesContainer>
 			</div>

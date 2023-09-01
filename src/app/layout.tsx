@@ -39,6 +39,10 @@ export default function RootLayout({
 					property="og:image"
 					content="./images/logo/logo_light_01.png"
 				/>
+				<link
+					href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+					rel="stylesheet"
+				></link>
 				<script
 					defer
 					src="https://kit.fontawesome.com/cc3041f69f.js"
@@ -54,7 +58,6 @@ export default function RootLayout({
 				<UseProvider>
 					<Providers>
 						<Header />
-						{/* className="lg:pt-[150px]" */}
 						<div>{children}</div>
 						<Footer />
 						<ScrollToTop />

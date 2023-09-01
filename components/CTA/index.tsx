@@ -5,6 +5,7 @@ import BackgroundTN from '../../public/images/technologies/background.png';
 import Image01 from '../../public/images/TellMore/image_01.png';
 import Image from 'next/image';
 import Link from 'next/link';
+import routers from '../../routers/routers';
 
 type ItemStylesContainerType = {
 	theme?: any;
@@ -62,10 +63,10 @@ const ItemStylesContainer: any = styled('div')(
 	}),
 );
 
-export default function TellMeMoreCP() {
+export default function CTACP() {
 	return (
 		<div
-			className="w-full h-full flex justify-center items-center"
+			className="w-full h-full flex justify-center items-center py-[70px]"
 			style={{
 				backgroundImage: `url(${BackgroundTN?.src})`,
 				backgroundSize: '100% 100%',
@@ -73,26 +74,30 @@ export default function TellMeMoreCP() {
 				backgroundPosition: 'center',
 			}}
 		>
-			<div className="container">
+			<div className="container lg:px-[69px] md:px-[50px]">
+				<div className="font-bold text-[30px] lg:text-[45px] md:text-[35px] text-[#0142f8] mb-2">
+					CTA
+				</div>
 				<ItemStylesContainer cols={2} spacing="8px">
 					<div className="item_content flex flex-col justify-center items-start">
-						<div className="text-black text-[30px] font-bold mb-2">
-							Electronic
+						<div className="text-black lg:text-[50px] md:text-[40px] text-[30px] font-bold">
+							On click,
 						</div>
-						<div className="text-black text-[28px] font-bold mb-5">
-							KNOW YOUR CUSTOMER
+						<div className="text-black lg:text-[35px] md:text-[25px] text-[20px] font-bold mb-5">
+							ALL-IN-ONE SOLUTIONS
 						</div>
-						<div className="text-[#494949] text-[16px] font-medium mb-2 ">
-							AI-Powered techonogy
+						<div className="text-[#494949] lg:text-[16px] md:text-[14px] text-[12px] font-medium mb-2 ">
+							We personalize solutions
 						</div>
-						<div className="text-[#494949] text-[16px] font-medium mb-2 ">
-							Securely and accurately identify your customer.
+						<div className="text-[#494949] lg:text-[16px] md:text-[14px] text-[12px] font-medium mb-2 ">
+							to match your current status and threshold of
+							expectation.
 						</div>
 						<Link
-							href="##"
-							className="font-bold text-center text-[18px] mt-3 text-white rounded-md bg-black w-[50%] py-2 uppercase"
+							href={routers.contactUs}
+							className="font-bold text-center lg:text-[18px] md:text-[16px] text-[14px] mt-3 text-white rounded-md bg-black w-[50%] py-2 uppercase"
 						>
-							Tell me more
+							Contact us
 						</Link>
 					</div>
 					<div className="item_content">

@@ -64,7 +64,13 @@ const Header = () => {
 						  }`
 				}`}
 			>
-				<div className={`${navbarOpen ? 'w-full' : 'container'}`}>
+				<div
+					className={`${
+						navbarOpen
+							? 'w-full'
+							: 'container lg:px-[69px] md:px-[50px]'
+					}`}
+				>
 					<div className="relative -mx-4 flex items-center justify-between">
 						<div className="w-60 max-w-full px-4 xl:mr-12">
 							<Link
@@ -177,7 +183,7 @@ const Header = () => {
 												>
 													{menuItem.path ? (
 														<Link
-															href={menuItem.path}
+															href={`${menuItem.path}`}
 															onClick={() => {
 																setNavbarOpen(
 																	false,
@@ -232,9 +238,7 @@ const Header = () => {
 																		submenuItem: any,
 																	) => (
 																		<Link
-																			href={
-																				submenuItem.path!
-																			}
+																			href={`${submenuItem.path!}`}
 																			onClick={() => {
 																				setOpenIndex(
 																					-1,

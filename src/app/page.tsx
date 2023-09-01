@@ -2,10 +2,11 @@
 import { Inter } from 'next/font/google';
 import {
 	Hero,
-	TechnologiesCP,
+	CoreValueCP,
 	ProductsCP,
-	TellMeMoreCP,
-	ExperimentsCP,
+	CTACP,
+	OurLibraryCP,
+	OurClientsCP,
 } from '../../components';
 import styles from './page.module.css';
 
@@ -15,11 +16,12 @@ export default function Home() {
 	return (
 		<>
 			<Hero />
-			<div className={`${styles.image_bgc} pb-3`}>
-				<TechnologiesCP />
+			<div className={`${styles.image_bgc}`}>
+				<CoreValueCP />
 				<ProductsCP />
-				<TellMeMoreCP />
-				<ExperimentsCP />
+				<CTACP />
+				<OurLibraryCP />
+				<OurClientsCP />
 			</div>
 		</>
 	);

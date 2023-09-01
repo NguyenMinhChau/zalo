@@ -26,11 +26,15 @@ export default function ContentTwo({
 	styleImage,
 }: ContentTwoType) {
 	return (
-		<div className={`${cx('content-container')}`}>
+		<div
+			className={`${cx(
+				'content-container',
+			)} container py-[70px] lg:px-[69px!important] md:px-[50px!important] lg:flex-row md:flex-row flex-col-reverse`}
+		>
 			<div
 				className={`${cx(
 					'content-left',
-				)} flex flex-col items-center justify-center`}
+				)} flex flex-col lg:items-start items-center justify-start lg:w-[20%] md:w-[20%] w-[100%]`}
 			>
 				<div
 					className={`${cx('left_img')}`}
@@ -44,7 +48,11 @@ export default function ContentTwo({
 					</div>
 				)}
 			</div>
-			<div className={`${cx('content-right-container')}`}>
+			<div
+				className={`${cx(
+					'content-right-container',
+				)} lg:w-[80%] md:w-[80%] w-[100%]`}
+			>
 				{titleHeader && (
 					<div className={`${cx('title-header')} mb12`}>
 						{titleHeader}

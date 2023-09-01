@@ -1,25 +1,26 @@
+'use client';
 import {
-	ExperimentsCP,
-	GetAPICP,
+	OurLibraryCP,
+	OurClientsCP,
 	Hero,
 	ProductsCP,
-	TechnologiesCP,
-	TellMeMoreCP,
+	CoreValueCP,
+	CTACP,
 } from '../../../../components';
 
-const ExperimentsProjectPage = () => {
+const ProductsPage = () => {
 	return (
 		<>
 			<Hero />
-			<div className="container my-5">
-				<TechnologiesCP />
+			<div className="container">
+				<CoreValueCP />
 				<ProductsCP />
-				<TellMeMoreCP />
-				<ExperimentsCP />
-				<GetAPICP />
+				<CTACP />
+				<OurLibraryCP />
+				<OurClientsCP />
 			</div>
 		</>
 	);
 };
 
-export default ExperimentsProjectPage;
+export default ProductsPage;
